@@ -16,8 +16,7 @@ Here is the unfolded kernel matrix with the data vector:
 
 ![2]
 
-which is equal to  
-![3].
+which is equal to ![3].
 
 And this is the same result (vectorized) you would have got by doing a sliding window of `ker` over `img`.
 
@@ -33,8 +32,7 @@ Here is the unfolded data matrix with the kernel vector:
 ![4]
 
 
-which is equal to  
-![5].
+which is equal to ![5].
 
 And this is the same result as above.    
 
