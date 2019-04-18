@@ -1,7 +1,7 @@
 # cnn-unfold
 A lot of this explanation is taken from [here](https://stackoverflow.com/a/44039201).
 
-This repository provides some python code which is able to unfold a convolutional kernel or the data matrix.
+This repository provides python code which is able to unfold a convolutional kernel or the data matrix.  
 What do i mean with unfolding the kernel?
 
 Let's say you have a 2d input `img` and 2d kernel `ker` and you want to calculate the convolution `img * ker`. Let's assume that `img` is of size `n×n` and `ker` is `k×k`.
@@ -16,7 +16,8 @@ Here is the unfolded kernel matrix with the data vector:
 
 ![2]
 
-which is equal to ![3].
+which is equal to  
+![3].
 
 And this is the same result (vectorized) you would have got by doing a sliding window of `ker` over `img`.
 
@@ -32,25 +33,26 @@ Here is the unfolded data matrix with the kernel vector:
 ![4]
 
 
-which is equal to ![5].
+which is equal to  
+![5].
 
-And this is the same result as above.
+And this is the same result as above.    
 
 
 
 
 ### Functions
 
-`get_unfolded_kernel(ker, n)`:
+`get_unfolded_kernel(ker, n)`:  
 Simply unfolds your kernel `ker` for the image size `n` and saves a template for faster calculation in the future. The method uses the saved templates if possible.
 
-`generate_template_set(sizes=[(28,1,28), (48,1,48), (56,1,56)])`:
+`generate_template_set(sizes=[(28,1,28), (48,1,48), (56,1,56)])`:  
 Generates and saves templates for the given image and kernel sizes.
 You can use this in advance to generate templates for the sizes you need. The calculation is much faster when you have a template. The templates are index matrices for the unfolded kernels with a `-1` for static padding zeros.
 You can call this method with a list of tuples as argument.
 Each tuple consists of the image size, the minimal kernel size and the maximal kernel size. The method will then generate templates for all kernel sizes in between.
 
-`unfold_data(x, k)`:
+`unfold_data(x, k)`:  
 Unfolds a given data matrix `x` for the kernel size `k`.
 This currently doesn't use templates.
 
