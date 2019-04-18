@@ -24,6 +24,7 @@ If we want to express the convolution as a matrix product but we want to unfold 
 You have to unroll your image to a matrix of size `(n-k+1)^2 x k^2` and the kernel to a `k^2 x 1` vector.
 
 Let's take our example with the 2x2 kernel and the 3x3 data matrix from above.
+
 ![1]
 
 Here is the unfolded data matrix with the kernel vector:
@@ -61,7 +62,7 @@ If you use this code it would be great if you mention this repository.
 
 [1]: https://latex.codecogs.com/gif.latex?%5Cdpi%7B100%7D%20%5Cbg_white%20%5Clarge%20%24%24%5Cleft%28%5Cbegin%7Barray%7D%7Bccc%7D%20x_1%26x_2%26x_3%5C%5C%20x_4%26x_5%26x_6%5C%5C%20x_7%26x_8%26x_9%20%5Cend%7Barray%7D%5Cright%29%20*%20%5Cleft%28%5Cbegin%7Barray%7D%7Bcc%7D%20k_1%26k_2%5C%5C%20k_3%26k_4%20%5Cend%7Barray%7D%5Cright%29%24%24
 
-[2]: https://latex.codecogs.com/gif.latex?%5Cdpi%7B100%7D%20%5Cbg_white%20%5Clarge%20%24%24%5Cleft%28%5Cbegin%7Barray%7D%7Bccccccccc%7D%20k_1%26k_2%260%26k_3%26k_4%260%260%260%260%5C%5C%200%26k_1%26k_2%260%26k_3%26k_4%260%260%260%5C%5C%200%260%260%26k_1%26k_2%260%26k_3%26k_4%260%5C%5C%200%260%260%260%26k_1%26k_2%260%26k_3%26k_4%20%5Cend%7Barray%7D%5Cright%29%20%5Ccdot%20%5Cleft%28%5Cbegin%7Barray%7D%7Bc%7D%20x_1%5C%5C%20x_2%5C%5C%20x_3%5C%5C%20x_4%5C%5C%20x_5%5C%5C%20x_6%5C%5C%20x_7%5C%5C%20x_8%5C%5C%20x_9%20%5Cend%7Barray%7D%5Cright%29%24%24
+[2]: https://latex.codecogs.com/gif.latex?%5Cdpi%7B100%7D%20%5Cbg_white%20%24%24%5Cleft%28%5Cbegin%7Barray%7D%7Bccccccccc%7D%20k_1%26k_2%260%26k_3%26k_4%260%260%260%260%5C%5C%200%26k_1%26k_2%260%26k_3%26k_4%260%260%260%5C%5C%200%260%260%26k_1%26k_2%260%26k_3%26k_4%260%5C%5C%200%260%260%260%26k_1%26k_2%260%26k_3%26k_4%20%5Cend%7Barray%7D%5Cright%29%20%5Ccdot%20%5Cleft%28%5Cbegin%7Barray%7D%7Bc%7D%20x_1%5C%5C%20x_2%5C%5C%20x_3%5C%5C%20x_4%5C%5C%20x_5%5C%5C%20x_6%5C%5C%20x_7%5C%5C%20x_8%5C%5C%20x_9%20%5Cend%7Barray%7D%5Cright%29%24%24
 
 [3]: https://latex.codecogs.com/gif.latex?%5Cinline%20%5Cdpi%7B100%7D%20%5Cbg_white%20%5Clarge%20%24%24%5Cleft%28%5Cbegin%7Barray%7D%7Bc%7D%20k_1x_1&plus;k_2x_2&plus;k_3x_4&plus;k_4x_5%5C%5C%20k_1x_2&plus;k_2x_3&plus;k_3x_5&plus;k_4x_6%5C%5C%20k_1x_4&plus;k_2x_5&plus;k_3x_7&plus;k_4x_8%5C%5C%20k_1x_5&plus;k_2x_6&plus;k_3x_8&plus;k_4x_9%20%5Cend%7Barray%7D%5Cright%29%24%24
 
