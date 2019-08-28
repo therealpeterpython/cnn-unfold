@@ -144,6 +144,7 @@ i.e. for k=2: return np.asarray([[1,2],[3,4]])
 :param k: is the size of the kernel (kernel = k*k)
 """
 def _generate_kernel_template(k):
+    # todo  shorten it like this: a = np.arange(12).reshape(2,3,2).swapaxes(1,2); a
     tpl = []
     for i in range(k):
         tpl.append(np.arange(k) + 1 +i*k)
